@@ -12,6 +12,7 @@ public class Launcher extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("main/home.fxml"));
         primaryStage.setScene(new Scene(root));
         primaryStage.setTitle("Tux Installer");
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 

@@ -1,0 +1,20 @@
+*{
+	primary:#2a2e30;
+}
+.root{
+	-fx-background-color: primary;
+}
+#dragPane{
+	-fx-background-color: primary;
+	-fx-effect: dropshadow(gaussian, black, 10, 0.1, 0, 0);
+}
+#dragMsg{
+	-fx-font-size: 20;
+	-fx-text-fill:#fff;
+	-fx-font-style: italic;
+}
+#logoText{
+	-fx-font-size: 40;
+	-fx-text-fill:#fff;
+	-fx-font-style: italic;
+}

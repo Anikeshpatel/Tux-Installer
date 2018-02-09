@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="grp.anon.tux.main.HomeController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="650.0" styleClass="root" stylesheets="@homeStyle.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="grp.anon.tux.main.HomeController">
+   <children>
+      <Pane fx:id="dragPane" layoutX="137.0" layoutY="129.0" onDragDropped="#dragDroped" onDragOver="#dragOver" prefHeight="223.0" prefWidth="377.0">
+         <children>
+            <Label fx:id="dragMsg" layoutX="10.0" layoutY="184.0" text="Drag and Drop AppImage With Icon" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="113.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/add-file.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Label fx:id="logoText" layoutX="201.0" layoutY="30.0" text="Tux Installer" />
+   </children>
 </AnchorPane>
