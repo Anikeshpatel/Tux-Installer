@@ -1,2 +1,2 @@
-# Tux-Installer
+# Tux Installer
 Linux AppImage Installer
