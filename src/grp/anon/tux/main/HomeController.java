@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.TransferMode;
 import javafx.scene.layout.Pane;
@@ -15,42 +16,14 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class HomeController implements Initializable {
-    @FXML
-    private Pane dragPane;
 
     @FXML
-    private Label dragMsg;
-
-    @FXML
-    private Label logoText;
+    private ScrollPane scroller;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        scroller.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
     }
-    @FXML
-    void dragDroped(DragEvent event) {
-        try {
-            List<File> files = event.getDragboard().getFiles();
-            if (!(files.size() > 2)){
-                File software = files.get(0);
-                File icon = files.get(1);
-                Design design = new Design(software,icon);
-            }
-            else {
-                showAlert("Please Drag Only AppImage & Icon");
-            }
-        }catch (Exception e){
-
-        }
-    }
-
-    @FXML
-    void dragOver(DragEvent event) {
-        if (event.getDragboard().hasFiles())
-            event.acceptTransferModes(TransferMode.ANY);
-    }
-
     private void showAlert(String msg){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setHeaderText(msg);

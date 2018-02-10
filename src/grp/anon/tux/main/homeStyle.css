@@ -1,20 +1,54 @@
 *{
 	primary:#2a2e30;
+	text:#727987;
 }
 .root{
 	-fx-background-color: primary;
 }
-#dragPane{
+
+.dark{
 	-fx-background-color: primary;
-	-fx-effect: dropshadow(gaussian, black, 10, 0.1, 0, 0);
+	-fx-background-radius:10;
 }
-#dragMsg{
-	-fx-font-size: 20;
-	-fx-text-fill:#fff;
-	-fx-font-style: italic;
+.dark:hover{
+	-fx-scale-x:0.95;
+	-fx-scale-y:0.95;
 }
-#logoText{
-	-fx-font-size: 40;
-	-fx-text-fill:#fff;
-	-fx-font-style: italic;
+.light{
+	-fx-background-color: #e7e7e7;
+}
+.dropPane{
+	-fx-border-color: derive(gray,5%);
+	-fx-border-style: dashed;
+	-fx-border-width: 3;
+	-fx-border-height:5;
+}
+.h1{
+	-fx-font-size: 30;
+	-fx-text-fill:text;
+}
+.h2{
+	-fx-font-size: 15;
+	-fx-text-fill:text;
+}
+
+
+#scroller .scroll-bar:vertical{
+	-fx-background-color: transparent;
+}
+#scroller .decrement-button, #scroller .increment-button{
+	-fx-background-color: transparent;
+	visibility: hidden;
+}
+#scroller .scroll-bar:vertical .track{
+	-fx-background-color: transparent;
+}
+#scroller .scroll-bar:vertical .thumb{
+	-fx-background-color: primary;
+	-fx-background-radius: 10;
+}
+#scroller .scroll-bar .thumb:hover,
+#scroller .scroll-bar .thumb:pressed{
+	-fx-background-color: orange;
+	-fx-background-radius: 10;
 }
