@@ -8,38 +8,54 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="550.0" prefWidth="860.0" styleClass="root" stylesheets="@homeStyle.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="grp.anon.tux.main.HomeController">
    <children>
       <ScrollPane fx:id="scroller" prefHeight="550.0" prefWidth="860.0">
          <content>
-            <VBox prefHeight="1000.0" prefWidth="850.0">
+            <VBox prefHeight="1000.0" prefWidth="850.0" styleClass="vbox">
                <children>
-                  <HBox prefHeight="96.0" prefWidth="850.0" />
+                  <HBox prefHeight="96.0" prefWidth="850.0">
+                     <children>
+                        <AnchorPane prefHeight="96.0" prefWidth="843.0" styleClass="appLogo">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <children>
+                              <Label layoutX="287.0" layoutY="17.0" text="Tux Installer" />
+                           </children>
+                        </AnchorPane>
+                     </children></HBox>
                   <HBox prefHeight="299.0" prefWidth="850.0">
                      <children>
-                        <AnchorPane prefHeight="299.0" prefWidth="425.0" styleClass="dark">
+                        <AnchorPane fx:id="appImage" prefHeight="299.0" prefWidth="425.0" styleClass="dark">
                            <children>
                               <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="130.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../../../../../../home/anikesh/Desktop/001-new-fffile.png" />
+                                    <Image url="@../Resources/001-new-fffile.png" />
                                  </image>
                               </ImageView>
                               <Label layoutX="79.0" layoutY="184.0" styleClass="h1" text="Install AppImage" />
                               <Label layoutX="132.0" layoutY="220.0" styleClass="h2" text="Simpy Drag &amp; Drop" />
                            </children></AnchorPane>
-                        <AnchorPane prefHeight="200.0" prefWidth="425.0" styleClass="dark">
+                        <AnchorPane fx:id="tar" prefHeight="200.0" prefWidth="425.0" styleClass="dark">
                            <HBox.margin>
                               <Insets left="5.0" />
                            </HBox.margin>
                            <children>
                               <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="130.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../../../../../../home/anikesh/Desktop/001-new-fffile.png" />
+                                    <Image url="@../Resources/001-new-fffile.png" />
                                  </image>
                               </ImageView>
                               <Label layoutX="134.0" layoutY="182.0" styleClass="h1" text="Install tar" />
                               <Label layoutX="132.0" layoutY="218.0" styleClass="h2" text="Simpy Drag &amp; Drop" />
+                              <Label layoutX="179.0" layoutY="237.0" text="Beta" textFill="#978b8b">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </AnchorPane>
                      </children>
@@ -52,24 +68,29 @@
                   </HBox>
                   <HBox prefHeight="299.0" prefWidth="850.0">
                      <children>
-                        <AnchorPane prefHeight="299.0" prefWidth="425.0" styleClass="dark">
+                        <AnchorPane fx:id="executable" prefHeight="299.0" prefWidth="425.0" styleClass="dark">
                            <children>
                               <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="130.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../../../../../../home/anikesh/Desktop/001-new-fffile.png" />
+                                    <Image url="@../Resources/001-new-fffile.png" />
                                  </image>
                               </ImageView>
                               <Label layoutX="72.0" layoutY="182.0" styleClass="h1" text="Install Executable" />
                               <Label layoutX="132.0" layoutY="218.0" styleClass="h2" text="Simpy Drag &amp; Drop" />
+                              <Label layoutX="178.0" layoutY="237.0" text="Beta" textFill="#978b8b">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                              </Label>
                            </children></AnchorPane>
-                        <AnchorPane prefHeight="200.0" prefWidth="425.0" styleClass="dark">
+                        <AnchorPane fx:id="about" prefHeight="200.0" prefWidth="425.0" styleClass="dark">
                            <HBox.margin>
                               <Insets left="5.0" />
                            </HBox.margin>
                            <children>
                               <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="130.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../../../../../../home/anikesh/Desktop/about.png" />
+                                    <Image url="@../Resources/about.png" />
                                  </image>
                               </ImageView>
                               <Label layoutX="161.0" layoutY="182.0" styleClass="h1" text="About" />
@@ -86,24 +107,24 @@
                   </HBox>
                   <HBox prefHeight="299.0" prefWidth="850.0">
                      <children>
-                        <AnchorPane prefHeight="299.0" prefWidth="425.0" styleClass="dark">
+                        <AnchorPane fx:id="githubPage" prefHeight="299.0" prefWidth="425.0" styleClass="dark">
                            <children>
                               <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="130.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../../../../../../home/anikesh/Desktop/GitHub-Mark-120px-plus.png" />
+                                    <Image url="@../Resources/GitHub-Mark-120px-plus.png" />
                                  </image>
                               </ImageView>
                               <Label layoutX="110.0" layoutY="182.0" styleClass="h1" text="Github Page" />
                               <Label layoutX="132.0" layoutY="218.0" styleClass="h2" text="See More Projects" />
                            </children></AnchorPane>
-                        <AnchorPane prefHeight="200.0" prefWidth="425.0" styleClass="dark">
+                        <AnchorPane fx:id="exit" prefHeight="200.0" prefWidth="425.0" styleClass="dark">
                            <HBox.margin>
                               <Insets left="5.0" />
                            </HBox.margin>
                            <children>
                               <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="131.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../../../../../../home/anikesh/Desktop/exit.png" />
+                                    <Image url="@../Resources/exit.png" />
                                  </image>
                               </ImageView>
                               <Label layoutX="170.0" layoutY="182.0" styleClass="h1" text="Exit" />

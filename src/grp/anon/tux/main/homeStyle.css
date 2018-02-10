@@ -5,12 +5,31 @@
 .root{
 	-fx-background-color: primary;
 }
-
+.appLogo{
+	-fx-border-color: text;
+	-fx-border-width: 0 10 0 10;
+	-fx-background-color: primary;
+	-fx-background-radius:0;
+	-fx-border-radius:0;
+}
+.appLogo .label{
+	-fx-text-fill:text;
+	-fx-font-size: 45;
+	-fx-font-family: ubuntu;
+	-fx-border-color: text;
+	-fx-border-width: 5 0 5 0;
+}
 .dark{
 	-fx-background-color: primary;
 	-fx-background-radius:10;
 }
 .dark:hover{
+	/*-fx-scale-x:0.95;
+	-fx-scale-y:0.95;*/
+	-fx-scale-x:1.02;
+	-fx-scale-y:1.02;
+}
+.dark:pressed{
 	-fx-scale-x:0.95;
 	-fx-scale-y:0.95;
 }
