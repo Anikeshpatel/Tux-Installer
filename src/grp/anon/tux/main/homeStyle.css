@@ -22,6 +22,8 @@
 .dark{
 	-fx-background-color: primary;
 	-fx-background-radius:10;
+	-fx-border-color:text;
+	-fx-border-radius:10;
 }
 .dark:hover{
 	/*-fx-scale-x:0.95;
@@ -70,4 +72,13 @@
 #scroller .scroll-bar .thumb:pressed{
 	-fx-background-color: orange;
 	-fx-background-radius: 10;
+}
+
+.labelBtn{
+	-fx-border-color: text;
+	-fx-border-width: 0 0 2 0;
+	-fx-cursor:hand;
+}
+.vbox{
+	-fx-background-color:primary;
 }

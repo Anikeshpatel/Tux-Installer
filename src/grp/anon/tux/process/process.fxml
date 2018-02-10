@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="550.0" stylesheets="@../main/homeStyle.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="grp.anon.tux.process.Process">
+   <children>
+      <AnchorPane fx:id="iconDropPane" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="287.0" fitWidth="284.0" layoutX="133.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resources/001-new-fffile.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="202.0" layoutY="378.0" styleClass="h1" text="Drop Icon" />
+            <Label fx:id="exitBtn" layoutX="250.0" layoutY="418.0" text="Cancel">
+               <styleClass>
+                  <String fx:value="h2" />
+                  <String fx:value="labelBtn" />
+               </styleClass>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
